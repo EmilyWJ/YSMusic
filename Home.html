@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    li{
+      list-style: none;
+    }
+    .home{
+      width:100%;
+      height:1500px;
+      border:1px solid red;
+    }
+    .dh-top{
+      position: fixed;
+      top:0;
+      width: 100%;
+      height: 50px;
+      background-color: #fff;
+      display:none;
+      z-index: 1001;
+    }
+    .main-dh{
+      position: relative;
+      margin:0 auto;
+      width:60%;
+      height: 100%;
+      /* border:1px solid red; */
+    }
+    #main-dh-one{
+      margin-top:-25px;
+      width:100%;
+      /* border:1px solid red; */
+    }
+    .logo-dh{
+      width:130px;
+      height:60px;
+    }
+    .logoko-dh{
+      position: absolute;
+      top:20px;
+      left:32px;
+      width:150px;
+      /* clip: rect(0 auto 121px 0) */
+    }
+    .logoko-dh b{
+      position:absolute;
+      top:8px;
+      font-size:20px;
+    }
+    .logotxt-dh ul{
+      position: absolute;
+      top:53px;
+      left:35px;
+      width:125px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 14px;
+      color: #858585;
+    }
+    .dh-right-dh{
+      position:absolute;
+      right:9%;
+      top:30px;
+      width:65%;
+      height:40px;
+      /* border:1px solid red; */
+    }
+    .dh-search-dh{
+      width:600px;
+      height:62px;
+    }
+    .search-dh{
+      width:428px;
+      height:35px;
+      border:2px solid #ff2337;
+      border-radius:13px;
+    }
+    .search-input-dh{
+      margin-top:7px;
+      width:80%;
+      height:20px;
+      outline: none;
+      border:none;
+      padding:0 5px;
+      box-sizing: border-box;
+      font-size:13px;
+      color:#999;
+    }
+    .search-btn-dh{
+      float:right;
+      top:2px;
+      width:60px;
+      height:35px;
+      cursor: pointer;
+      text-align: center;
+      color:#fff;
+      line-height: 35px;
+      background-color:#ff2337;
+      border-radius: 0 10px 10px 0;
+    }
+    .iconfont-dh{
+      margin:7px 16px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border:2px solid #fff;
+    }
+    .lin-dh{
+      margin:-8px 29px;
+      width:12px;
+      height:2px;
+		  transform:rotate(42deg);
+      background-color:#fff;
+    }
+    /*logo、搜索栏区域和导航栏*/
+    .top{
+      width:100%;
+      height:28px;
+      background-color:#000;
+    }
+    .top-main{
+      margin:0 auto;
+      display: flex;
+      justify-content: space-between;
+      width:70%;
+      height:100%;
+    }
+    .top-left ul{
+      margin-top:5px;
+      width:350px;
+      display: flex;
+      justify-content: space-between;
+      color:#999;
+      font-size: 13px;
+    }
+    .top-right{
+      position:absolute;
+      right:0;
+      width:50%;
+      height:27px;
+      font-size:12px;
+      line-height:27px;
+    }
+    .top-left a,.top-right a{
+      color:#999;
+      text-decoration:none;
+    }
+    .top-left a:hover, .top-right a:hover{
+      color:#ff2337;
+      cursor:pointer;
+    }
+    .top-right ul{
+      display: flex;
+      justify-content: space-between;
+      width:400px;
+    }
+    .main{
+      position:relative;
+      margin:0 auto;
+      width:70%;
+      /* border:1px solid red; */
+    }
+    #main-dh{
+      width:100%;
+      height:165px;
+      /* border:1px solid red; */
+    }
+    .logo{
+      width:230px;
+      height:120px;
+    }
+    .logoko{
+      position: absolute;
+      top:20px;
+      width:250px;
+      /* clip: rect(0 auto 121px 0) */
+    }
+    .logoko b{
+      position:absolute;
+      top:15px;
+      left:110px;
+      font-size:35px;
+    }
+    .logotxt ul{
+      position: absolute;
+      top:85px;
+      left:12px;
+      width:225px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 14px;
+    }
+    .dh-right{
+      position:absolute;
+      right:3%;
+      top:42px;
+      width:65%;
+      height:70px;
+      /* border:1px solid red; */
+    }
+    .dh-search{
+      width:600px;
+      height:62px;
+    }
+    .search{
+      width:428px;
+      height:35px;
+      border:2px solid #ff2337;
+      border-radius:13px;
+    }
+    .search-input{
+      margin-top:7px;
+      width:80%;
+      height:20px;
+      outline: none;
+      border:none;
+      padding:0 5px;
+      box-sizing: border-box;
+      font-size:13px;
+      color:#999;
+    }
+    .search-btn{
+      float:right;
+      top:2px;
+      width:60px;
+      height:35px;
+      cursor: pointer;
+      text-align: center;
+      color:#fff;
+      line-height: 35px;
+      background-color:#ff2337;
+      border-radius: 0 10px 10px 0;
+    }
+    .iconfont {
+      margin:7px 16px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border:2px solid #fff;
+    }
+    .lin{
+      margin:-8px 29px;
+      width:12px;
+      height:2px;
+		  transform:rotate(42deg);
+      background-color:#fff;
+    }
+    .search-title{
+      width: 360px;
+      display: flex;
+      justify-content: space-between;
+      margin:5px 20px;
+      font-size:12px;
+      color:#999;
+    }
+    .search-title>li:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .dh-list{
+      width:97%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .list-box,.alllist li{
+      width:164px;
+      height:40px;
+      color:#fff;
+      background: linear-gradient(90deg,red,#ff3264);
+    }
+    .fle{
+      width:116px;
+      display:flex;
+      justify-content: space-around;
+    }
+    .list-dh ul{
+      width:850px;
+      display: flex;
+      justify-content:space-around;
+      line-height: 40px;
+      font-size:15px;
+      font-weight:bold;
+    }
+    .list-dh ul li:hover{
+      cursor: pointer;
+      color: #ff1e32;
+    }
+    .lineicon{
+      margin:14px 15px;
+      width:15px;
+    }
+    .lineicon div{
+      width:15px;
+      border-top:2px solid #ddd;
+      margin-bottom: 3px;
+    }
+    .list-box span{
+      margin-top:9px;
+      font-size:15px;
+    }
+    .list-box:hover{
+      cursor: pointer;
+    }
+    .alllist ul{
+      margin-top:-3px;
+    }
+    .alllist li{
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      z-index: 1000;
+    }
+    /*轮播*/
+    #lb-area{
+      width:1308px;
+      height:470px;
+    }
+    .wrap{
+      position:relative;
+    }
+    .list{
+      overflow:hidden;
+    }
+    .list li{
+      display:none;
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      font-size:100px;
+      line-height:270px;
+      text-align:center;
+      color:#fff;
+    }
+    .list li.active{
+      display:block;
+    }
+    .list li img{
+      width:100%;
+      height:470px;
+    }
+    .Tab{
+      position:absolute;
+      top:380px;
+      left:45%;
+      width:270px;
+      height:13px;
+      border-radius:10px;
+    }
+    .Tab li{
+      float:left;
+      margin:3px 7px;
+      width:10px;
+      height:10px;
+      border-radius:20px;
+      background-color:#fff;
+    }
+    .Tab li.active{
+      background-color:#c20c0c;
+    }
+    .btn{
+      position:absolute;
+      top:200px;
+      width:30px;
+      height:60px;
+      font-size:30px;
+      line-height:55px;
+      text-align:center;
+      color:#fff;
+      cursor:pointer;
+    }
+    .btn:hover{
+      background-color:#c7c7be;
+    }
+    .next{
+      right:0;
+    }
+    .m-sellpoint{
+      position: relative;
+      margin-top: 435px;
+      width:100%;
+      height:36px;
+      background-color: rgba(0,0,0,.3);
+    }
+    .m-sellpoint ul{
+      width:400px;
+      display: flex;
+      justify-content: space-between;
+      margin-left:230px;
+      line-height: 33px;
+      font-size:13px;
+      color:#fff;
+    }
+    .sell-point{
+      margin-top: -25px;
+      margin-left: 65%;
+    }
+    .sell-point a{
+      font-size:13px;
+      color:#fff;
+      text-decoration: none;
+    }
+    .sell-point a:hover{
+      text-decoration: underline;
+    }
+    .main-content{
+      width: 100%;
+      height:100%;
+      background-color: #f0f0f0;
+    }
+    .content-al{
+      margin:30px auto;
+      width:83%;
+      height:500px;
+    }
+    .content-title{
+      position: relative;
+      width:500px;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .content-title>.dat>span{
+      color:#999;
+      font-size: 14px;
+    }
+    .dat{
+      width:300px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .dat>div{
+      display: flex;
+      justify-content: space-between;
+      margin-top:10px;
+      line-height: 20px;
+    }
+    .dat-di>div{
+      width: 22px;
+      height: 22px;
+      border-radius: 20px;
+      text-align: center;
+      color:#fff;
+      font-size: 13px;
+      background-color: #ff080f;
+    }
+    .content-sh{
+      position: relative;
+      margin-top:20px;
+      width:100%;
+      height:380px;
+    }
+    .sh-left{
+      width: 100%;
+      height:100%;
+      background-color: #fff;
+    }
+    .sh-right{
+      position: absolute;
+      top:0;
+      right:-16px;
+      width:260px;
+    }
+    .sh-li{
+      float:left;
+      width:420px;
+      height:188px;
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #ccc;
+    }
+    .content-sh>ul>li>div{
+      width:100%;
+      height:90px;
+    }
+    .sh-lil{
+      height: 40px;
+      line-height: 50px;
+      color:#333;
+    }
+    .sh-li2{
+      font-size: 13px;
+      color:#999;
+    }
+    .sh-li3{
+      width: 50px;
+      font-size: 20px;
+      line-height: 40px;
+      color: #ff1e32;
+    }
+    .sh-li4{
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .sh-li4 div p{
+      color:#999;
+      font-size: 14px;
+    }
+    .process{
+      position: relative;
+      width: 100%;
+      height: 4px;
+      background-color: #e8e8e8;
+    }
+    .process b{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #ff1e32;
+    }
+    .goods-btn{
+      margin-top:-3px;
+      width: 90px;
+      height: 30px;
+      color:#ff1e32;
+      border: 1px solid #ff1e32;
+      border-radius: 15px;
+      text-align: center;
+      line-height: 28px;
+    }
+    .goods-btn:hover{
+      cursor: pointer;
+    }
+    .content-left{
+      position: absolute;
+      margin-top: 58px;
+      width: 99px;
+      height: 330px;
+    }
+    .content-left ul{
+      margin-top: -4px;
+      background-color: #fff
+    }
+    .content-left ul li{
+      height: 49px;
+      color:#999;
+      font-size: 12px;
+      line-height: 50px;
+    }
+    .cl-main{
+      font-weight: bold;
+      font-size: 23px;
+      color: #333;
+    }
+    .content-left ul li:hover{
+      background-color:#f0f0f0;
+      color:#ff080f;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body onload="show()">
+  <div class="home">
+    <div class="top">
+      <div class="top-main">
+        <div class="top-left">
+          <ul>
+            <li>小灰灰欢迎您！</li>
+            <li>
+              <a>你好，请登录</a>
+            </li>
+            <li>
+              <a href="#">免费注册</a>
+            </li>
+            <li>
+              <a href="#">手机惠购</a>
+            </li>
+          </ul>
+        </div>
+        <div class="top-right">
+          <ul>
+            <li>
+              <a href="#">我的订单</a>
+            </li>
+            <li>
+              <a href="#">我的账户</a>
+            </li>
+            <li>
+              <a href="#">VIP会员</a>
+            </li>
+            <li>
+              <a href="#">关注微信</a>
+            </li>
+            <li>
+              <a href="#">客户服务</a>
+            </li>
+            <li>
+              <a href="#">手机版</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dh-top" id="sbtn">
+      <div class="main-dh">
+        <div id="main-dh-one">
+          <div class="logo-dh">
+            <div class="logoko-dh">
+              <img src="../images/logoko.png " width="50px" height="40px">
+              <b>欢 乐 购</b>
+            </div>
+            <div class="logotxt-dh">
+              <ul>
+                <li>我</li>
+                <li>们</li>
+                <li>的</li>
+                <li>美</li>
+                <li>好</li>
+                <li>世</li>
+                <li>界</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dh-right-dh">
+            <div class="dh-search-dh">
+              <div class="search-dh">
+                <input class="search-input-dh" type="text" placeholder="美妆">
+                <div class="search-btn-dh">
+                  <div class="iconfont-dh"></div>
+                  <div class="lin-dh"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div id="main-dh">
+        <div class="logo">
+          <div class="logoko">
+            <img src="../images/logoko.png " width="100px" height="70px">
+            <b>欢 乐 购</b>
+          </div>
+          <div class="logotxt">
+            <ul>
+              <li>我</li>
+              <li>们</li>
+              <li>的</li>
+              <li>美</li>
+              <li>好</li>
+              <li>世</li>
+              <li>界</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dh-right">
+          <div class="dh-search">
+            <div class="search">
+              <input class="search-input" type="text" placeholder="美妆">
+              <div class="search-btn">
+                <div class="iconfont"></div>
+                <div class="lin"></div>
+              </div>
+            </div>
+            <div class="search-sou">
+              <ul class="search-title">
+                <li>面膜</li>
+                <li>口红</li>
+                <li>减肥</li>
+                <li>全球工厂店</li>
+                <li>运动鞋</li>
+                <li>项链</li>
+                <li>女包</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dh-list">
+          <div class="list-box">
+            <div class="fle">
+              <div class="lineicon">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <span>所有分类</span>
+            </div>
+            <div class="alllist">
+              <ul>
+                <li>
+                  <span><img src="../images/list_1.png" width="20px" height="20px" alt=""></span>
+                  <span>美妆彩妆</span>
+                  <span>></span>
+                </li>
+                <li>
+                    <span><img src="../images/list_2.png" width="20px" height="20px" alt=""></span>
+                  <span>母婴儿童</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_3.png" width="20px" height="20px" alt=""></span>
+                  <span>营养保健</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_4.png" width="20px" height="20px" alt=""></span>
+                  <span>数码家电</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_5.png" width="20px" height="20px" alt=""></span>
+                  <span>个人洗护</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_6.png" width="20px" height="20px" alt=""></span>
+                  <span>服饰鞋靴</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_7.png" width="20px" height="20px" alt=""></span>
+                  <span>运动户外</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_8.png" width="20px" height="20px" alt=""></span>
+                  <span>手表配饰</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_9.png" width="20px" height="20px" alt=""></span>
+                  <span>轻奢装饰</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_10.png" width="20px" height="20px" alt=""></span>
+                  <span>家居生活</span>
+                  <span>></span></li>
+                <li>
+                    <span><img src="../images/list_11.png" width="20px" height="20px" alt=""></span>
+                  <span>环球美食</span>
+                  <span>></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="list-dh">
+            <ul>
+              <li>首页</li>
+              <li>今日限时购</li>
+              <li>每日上新</li>
+              <li>国家馆</li>
+              <li>海外旗舰店</li>
+              <li>工厂店</li>
+              <li>品质奶粉</li>
+              <li>人气面膜</li>
+              <li>礼品卡</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='lb-area' >
+      <div class='wrap'>
+        <ul class='list'>
+          <li class='active'><img src="../images/lb_1.jpg"></li>
+          <li><img src="../images/lb_2.jpg"></li>
+          <li><img src="../images/lb_3.jpg"></li>
+          <li><img src="../images/lb_4.jpg"></li>
+          <li><img src="../images/lb_5.jpg"></li>
+          <li><img src="../images/lb_6.jpg"></li>
+          <li><img src="../images/lb_7.jpg"></li>
+          <li><img src="../images/lb_8.jpg"></li>
+          <li><img src="../images/lb_9.jpg"></li>
+        </ul>
+        <ul class='Tab'>
+          <li class='active'></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class='pre btn' >&lt;</div>
+        <div class='next btn'>&gt;</div>
+      </div>
+      <div class="m-sellpoint">
+        <ul>
+          <li>乐购自营</li>
+          <li>全球直采</li>
+          <li>假一赔十</li>
+          <li>售后无忧</li>
+        </ul>
+        <div class="sell-point">
+          <img src="../images/list_12.png">
+          <a href="#">领乐购1000元新人礼，APP下单更享手机价</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="content-left" id="cl-left">
+        <img src="../images/left_1.jpg" alt="">
+        <ul class="cl-main">
+          <li>今日限时购</li>
+          <li>热门品牌</li>
+        </ul>
+        <ul>
+          <li>美妆专区</li>
+          <li>母婴专区</li>
+          <li>营养保健</li>
+          <li>数码家电</li>
+        </ul>
+      </div>
+      <div class="content-al">
+        <div class="content-title">
+          <h2>今日限时购</h2>
+          <span>本场还剩</span>
+          <div class="dat">
+            <div class="dat-di">
+              <div class="dat-di1" id="dat-db"></div>：
+              <div class="dat-di2" id="dat-dg"></div>：
+              <div class="dat-di3" id="dat-de"></div>
+            </div>
+          </div>
+        </div>
+        <div class="content-sh">
+          <ul class="sh-left">
+            <li class="sh-li">
+              <img src="../images/shop_1.jpg">
+              <div>
+                <ul>
+                  <li class="sh-lil">
+                    <h4>来自世界纯净奶源地</h4>
+                  </li>
+                  <li class="sh-li2">Aptamil新西兰爱他美 金装爱他美婴儿配方奶粉 3段 900克 6罐装 1-2岁适用</li>
+                  <li class="sh-li3"><b>￥810</b></li>
+                  <li class="sh-li4">
+                    <div>
+                      <div class="process">
+                        <b style="width:91.5%"></b>
+                      </div>
+                      <p>
+                          剩余<span>183</span>件
+                      </p>
+                    </div>
+                    <div class="goods-btn">立即抢购</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sh-li">
+              <img src="../images/shop_2.jpg">
+              <div>
+                <ul>
+                  <li class="sh-lil">
+                    <h4>胜任大小事，续航一整天</h4>
+                  </li>
+                  <li class="sh-li2">Apple 苹果 MacBook Air 13.3英寸 2017款 128G(i5/8GB/MQD32CH/A)</li>
+                  <li class="sh-li3"><b>￥5999</b></li>
+                  <li class="sh-li4">
+                    <div>
+                      <div class="process">
+                        <b style="width:91.5%"></b>
+                      </div>
+                      <p>
+                          剩余<span>49</span>件
+                      </p>
+                    </div>
+                    <div class="goods-btn">立即抢购</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sh-li">
+              <img src="../images/shop_3.jpg">
+              <div>
+                <ul>
+                  <li class="sh-lil">
+                    <h4>美在智慧，科技魅力</h4>
+                  </li>
+                  <li class="sh-li2">Apple 苹果 iPhone8 Plus (A1864) 64GB 移动联通电信4G手机 国内行货</li>
+                  <li class="sh-li3"><b>￥4797</b></li>
+                  <li class="sh-li4">
+                    <div>
+                      <div class="process">
+                        <b style="width:91.5%"></b>
+                      </div>
+                      <p>
+                          剩余<span>119</span>件
+                      </p>
+                    </div>
+                    <div class="goods-btn">立即抢购</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sh-li">
+              <img src="../images/shop_4.jpg">
+              <div>
+                <ul>
+                  <li class="sh-lil">
+                    <h4>满满金箔 平价精华</h4>
+                  </li>
+                  <li class="sh-li2">skinature 思肤秀 24K黄金金箔胜肽高浓缩精华液 100毫升</li>
+                  <li class="sh-li3"><b>￥198</b></li>
+                  <li class="sh-li4">
+                    <div>
+                      <div class="process">
+                        <b style="width:81.5%"></b>
+                      </div>
+                      <p>
+                          剩余<span>776</span>件
+                      </p>
+                    </div>
+                    <div class="goods-btn">立即抢购</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="sh-right">
+            <li>
+              <img src="../images/shop_5.jpg" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const md=document.getElementById("sbtn"),
+          cl_left=document.getElementById("cl-left");
+    window.onscroll=function(){
+      var top=window.scrollY;
+      if(top>80){
+        md.style.cssText="display:block";
+      }else if(top<80){
+        md.style.cssText="";
+      }
+      if(top>630){
+        cl_left.style.cssText="position:fixed;top:50px;left:0;";
+      }else if(top<630){
+        cl_left.style.cssText="";
+      }
+    }
+    let pre=document.getElementsByClassName('pre')[0],
+		nex=document.getElementsByClassName('next')[0],
+		list=document.querySelectorAll('.list li'),
+		tabLi=document.querySelectorAll('.Tab li'),
+		box=document.getElementsByClassName('wrap')[0],
+		timeId=0,
+		index=0,
+		len=list.length;
+		const setNex=function(){
+			list[index].className="";
+			tabLi[index].className="";
+			index++;
+			if(index>4){
+				index=0;
+			}
+			list[index].className="active";
+			tabLi[index].className="active";
+		}
+
+		nex.onclick=setNex;
+
+		pre.onclick=function(){
+			list[index].className="";
+			tabLi[index].className="";
+			index--;
+			if(index<0){
+				index=4;
+			}
+			list[index].className="active";
+			tabLi[index].className="active";
+		}
+		for(let i=0;i<len;i++){
+			tabLi[i].onclick=function(){
+				list[index].className="";
+				tabLi[index].className="";
+				index=i;
+				list[index].className="active";
+				tabLi[index].className="active";
+			}
+		}
+		//自动轮播
+		timeId=setInterval(setNex,3000);
+
+		box.onmouseenter=() =>{
+			clearInterval(timeId);
+		}
+		box.onmouseleave=() =>{
+			timeId=setInterval(setNex,3000);
+		}
+    function show(){
+      var time=Number(new Date(2019,4,5,12,34,30));
+      // var time=new Date(myyear,mymonth,myday,myhour,myminute,mysecond).getTime();
+      //获取当前时间
+      var nowTime=Date.now();
+      // var nowTime=new Date().getTime();
+      //获取时间差
+      var timediff=Math.round((time-nowTime)/1000);
+      //获取还剩多少天
+      var day=parseInt(timediff/3600/24);
+      //获取还剩多少小时
+      var hour=parseInt(timediff/3600%24);
+      //获取还剩多少分钟
+      var minute=parseInt(timediff/60%60);
+      //获取还剩多少秒
+      var second=timediff%60;
+      //输出还剩多少时间
+      document.getElementById("dat-db").innerHTML=hour;
+      document.getElementById("dat-dg").innerHTML=minute;
+      document.getElementById("dat-de").innerHTML=second;
+      setTimeout(show,1000);
+      if(timediff==0){return;}
+    }
+  </script>
+</body>
+</html>
